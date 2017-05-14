@@ -6,5 +6,6 @@ module.exports = {
   API_VERSION_URL: API_VERSION_URL,
   API_URL: API_URL,
   API_AUTHENTICATION_URL: API_AUTHENTICATION_URL,
+  API_CREATE_BUCKET_URL: '/b2_create_bucket',
   MAX_INFO_HEADERS: 10    // maximum number of custom x-bz-info-* headers
 };
