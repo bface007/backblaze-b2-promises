@@ -1,6 +1,6 @@
 {
   "name": "backblaze-b2-promises",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "A Backblaze B2 module returning Promises (Bluebird)",
   "main": "index.js",
   "dependencies": {
