@@ -1,6 +1,6 @@
 {
   "name": "backblaze-b2-promises",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "A Backblaze B2 module returning Promises (Bluebird)",
   "main": "index.js",
   "dependencies": {
@@ -12,7 +12,9 @@
     "sha1": "^1.1.1",
     "sha1-file": "^1.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "express": "^4.15.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
