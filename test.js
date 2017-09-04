@@ -3,31 +3,48 @@
  */
 let rp = require('request-promise'),
     utils = require('./lib/utils'),
-    express = require('express');
+    express = require('express'),
+    async = require('promise-async'),
+    crypto = require('crypto-promise');
 
 const app = express();
 
-app.all('/', (req, res) => {
-  let getGoogle = () => {
-    return rp.get('https://google.fr')
+// app.use('/', (req, res) => {
+//   let getGoogle = () => {
+//     return rp.get('https://google.fr')
+//   };
+//
+//   let returnToMe = () => {
+//     return utils.retry({
+//       times: 3,
+//       interval: 1000
+//     }, getGoogle);
+//   };
+//
+//   returnToMe()
+//     .then(response => {
+//       return res.send(response)
+//     })
+//     .catch(err => {
+//       return res.send(err);
+//     });
+//
+//   // res.send("yo")
+// });
+
+app.use('/', (req, res) => {
+  let test = () => {
+    return crypto.hash('sha1')('123456');
   };
   
-  let returnToMe = () => {
-    return utils.retry({
-      times: 3,
-      interval: 2000
-    }, getGoogle);
-  };
-  
-  returnToMe()
-    .then(response => {
-      return res.send(response)
+  return test()
+    .then(result => {
+      res.json(result.toString('hex'))
     })
     .catch(err => {
-      return res.send(err);
+      console.log(err);
+      res.send()
     });
-  
-  // res.send("yo")
 });
 
 app.listen(3002, 'localhost', () => {

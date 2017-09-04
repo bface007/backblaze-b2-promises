@@ -1,10 +1,11 @@
 {
   "name": "backblaze-b2-promises",
-  "version": "1.0.22",
+  "version": "1.0.46",
   "description": "A Backblaze B2 module returning Promises (Bluebird)",
   "main": "index.js",
   "dependencies": {
     "async": "^2.4.0",
+    "crypto-promise": "^2.0.0",
     "fs-extra": "^3.0.1",
     "promise-async": "^0.2.0",
     "request": "^2.81.0",
